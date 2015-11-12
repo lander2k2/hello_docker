@@ -1,10 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Hello Docker!</title>
     </head>
     <body>
         <h1>Hello Docker!</h1>
-        <p>I am a static page served from a docker container.</p>
+        <p id="message"></p>
+        <script>
+            var hostname = location.hostname;
+            document.getElementById("message").innerHTML = "I am a static page served from a docker container on host " + hostname;
+        </script>
     </body>
 </html>
 
